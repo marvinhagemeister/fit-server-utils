@@ -1,0 +1,22 @@
+{
+  "name": "fit-utils",
+  "version": "0.0.1",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "mocha",
+    "test-watch": "npm test -- -w",
+    "lint": "tslint src/**/*",
+    "build": "tsc",
+    "watch": "tsc -w",
+    "prepublish": "npm run lint && npm run test && npm run build"
+  },
+  "author": "Marvin Hagemeister <marvin@marvinhagemeister.de>",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.0.2",
+    "tslint": "^3.15.1",
+    "typescript": "^1.8.10"
+  }
+}
