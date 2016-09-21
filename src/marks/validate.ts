@@ -32,7 +32,7 @@ export function validate(mark: IFITMark): string {
 
 export function validateMMark(value: string): string {
   if (M_CONTENT.indexOf(value) === -1) {
-    return  "Invalid mark value \"" + value
+    return "Invalid mark value \"" + value
       + "\" for mark of type \"m\". Allowed values are: "
       + M_CONTENT.join(", ");
   }
@@ -46,7 +46,7 @@ export function validateMMark(value: string): string {
 }
 
 export function validateDebugMark(input: string | string[]): string {
-  let values = Array.isArray(input) ? input.split("-") : input;
+  let values = !Array.isArray(input) ? input.split("-") : input;
 
   if (values.length < 3) {
     return "Received invalid mark properties \"" + input
