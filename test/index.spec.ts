@@ -6,5 +6,6 @@ describe("index", () => {
     t.equal(typeof index.validateMark, "function");
     t.equal(typeof index.getMarks, "function");
     t.equal(typeof index.updateMark, "function");
+    t.equal(typeof index.removeMark, "function");
   });
 });

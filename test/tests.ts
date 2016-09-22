@@ -7,6 +7,7 @@ require("source-map-support").install();
 
 import "./index.spec";
 import "./marks/parse.spec";
+import "./marks/remove.spec";
 import "./marks/update.spec";
 import "./marks/validate.spec";
 
