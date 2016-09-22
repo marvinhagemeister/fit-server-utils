@@ -1,5 +1,5 @@
 import { IFITMark } from "../../src/marks/mark";
-import { M_CONTENT, validate } from "../../src/marks/validate";
+import { M_CONTENT, validateMark as validate } from "../../src/marks/validate";
 import { assert as t } from "chai";
 
 describe("marks > validate", () => {

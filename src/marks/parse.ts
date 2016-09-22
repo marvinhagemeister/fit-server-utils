@@ -5,7 +5,9 @@ export function getMarks(input: string): IFITMark[] {
 
   let match: IFITMark[] = [];
   let item: string[] = [];
+  /* tslint:disable no-conditional-assignment  */
   while (item = regex.exec(input)) {
+    /* tslint:enable no-conditional-assignment  */
     if (item.length <= 0) {
       continue;
     }

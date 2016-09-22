@@ -33,4 +33,3 @@ export function updateMark(input: string, mark: IFITMark): string {
 function markToString(mark: IFITMark): string {
   return ";" + mark.key + ((mark.value === null) ? "" : "=" + mark.value);
 }
-

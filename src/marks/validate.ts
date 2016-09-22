@@ -6,7 +6,7 @@ export const DEBUG_CHANNEL = ["_all_", "ac", "config", "dc", "flow", "parser",
 export const DEBUG_LEVEL = ["error", "warning", "info", "verbose"];
 export const M_CONTENT = ["js", "jsl", "css", "is"];
 
-export function validate(mark: IFITMark): string {
+export function validateMark(mark: IFITMark): string {
   switch (mark.key) {
     case "d":
       return validateDebugMark(mark.value);
