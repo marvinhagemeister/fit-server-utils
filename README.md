@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/marvinhagemeister/fit-server-utils.svg?branch=master)](https://travis-ci.org/marvinhagemeister/fit-server-utils)
+
 # Fit-Server Utils
 
 This package contains useful functions when dealing with the Sevenval FIT-Server.
