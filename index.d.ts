@@ -6,3 +6,4 @@ export interface IFITMark {
 export function validateMark(mark: IFITMark): string;
 export function getMarks(input: string): IFITMark[];
 export function updateMark(input: string, mark: IFITMark): string;
+export function removeMark(input: string, mark: string): string;
