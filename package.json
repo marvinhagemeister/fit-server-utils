@@ -1,8 +1,12 @@
 {
   "name": "fit-server-utils",
   "version": "1.0.0",
-  "description": "",
+  "description": "Helper functions when working with Sevenval FIT-Server",
   "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:marvinhagemeister/fit-server-utils.git"
+  },
   "scripts": {
     "pretest": "npm run build",
     "test": "mocha --reporter spec --full-trace dist/test/tests.js",
