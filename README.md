@@ -10,7 +10,14 @@ npm install --save-dev fit-server-utils
 
 ## API
 
-**`validateMark(mark: { key: "d", value: "pageend-_all_-verbose" }): string`**
+```ts
+interface IFITMark {
+  key: string;
+  value: string;
+}
+```
+
+**`validateMark(mark: IFITMark): string`**
 
 Validates a given mark. Returns `null` if valid and an error message if invalid.
 
