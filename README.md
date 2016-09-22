@@ -29,6 +29,10 @@ Gets all marks from a string.
 
 Update or add a mark to a given string.
 
+**`removeMark(input: string, markKey: string): string`**
+
+Remove a mark from a string.
+
 ## License
 
 MIT, see LICENSE file
