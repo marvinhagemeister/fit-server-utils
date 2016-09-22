@@ -7,5 +7,6 @@ describe("index", () => {
     t.equal(typeof index.getMarks, "function");
     t.equal(typeof index.updateMark, "function");
     t.equal(typeof index.removeMark, "function");
+    t.equal(Object.keys(index).length, 4);
   });
 });
