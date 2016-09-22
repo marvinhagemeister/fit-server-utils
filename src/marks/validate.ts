@@ -1,13 +1,10 @@
-export interface IFITMark {
-  key: string;
-  value: string;
-}
+import { IFITMark } from "./mark";
 
-const DEBUG_TARGET = ["pageend", "page", "pagejs", "pagejson", "errorlog"];
-const DEBUG_CHANNEL = ["_all_", "ac", "config", "dc", "flow", "parser",
+export const DEBUG_TARGET = ["pageend", "page", "pagejs", "pagejson", "errorlog"];
+export const DEBUG_CHANNEL = ["_all_", "ac", "config", "dc", "flow", "parser",
   "request", "time"];
-const DEBUG_LEVEL = ["error", "warning", "info", "verbose"];
-const M_CONTENT = ["js", "jsl", "css", "is"];
+export const DEBUG_LEVEL = ["error", "warning", "info", "verbose"];
+export const M_CONTENT = ["js", "jsl", "css", "is"];
 
 export function validate(mark: IFITMark): string {
   switch (mark.key) {
@@ -20,7 +17,7 @@ export function validate(mark: IFITMark): string {
     case "ppl":
     case "rc":
     case "ucm":
-      if (typeof mark.value !== "undefined" && mark.value !== null) {
+      if (mark.value === null || mark.value === "") {
         return "Mark \"" + mark.key + "\" doesn\'t have a value.";
       }
 
@@ -48,7 +45,17 @@ export function validateMMark(value: string): string {
 export function validateDebugMark(input: string | string[]): string {
   let values = !Array.isArray(input) ? input.split("-") : input;
 
+  values.forEach(val => {
+    if (val.indexOf(";") > -1) {
+      return "mark value must not contain a \";\"";
+    }
+  });
+
   if (values.length < 3) {
+    if (values[0] === "") {
+      return "\"d\" mark must not have a value of null";
+    }
+
     return "Received invalid mark properties \"" + input
       + "\" for mark of type \"d\"";
   }

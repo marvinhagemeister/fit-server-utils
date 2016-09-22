@@ -1,4 +1,4 @@
-import { IFITMark } from "./validate";
+import { IFITMark } from "./mark";
 
 export function getMarks(input: string): IFITMark[] {
   const regex = /\/?;+([a-z0-9]+)(?:=?([a-z0-9_-]+)?)+/g;
@@ -12,7 +12,7 @@ export function getMarks(input: string): IFITMark[] {
 
     match.push({
       key: item[1],
-      value: item[2],
+      value: typeof item[2] === "undefined" ? null : item[2],
     });
   }
 
